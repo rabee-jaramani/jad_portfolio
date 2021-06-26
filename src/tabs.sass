@@ -1,0 +1,43 @@
+
+.tabs
+    position: fixed
+    right: 0
+    display: flex
+    width: 15%
+    height: 100%
+    .tab
+        flex: 1
+        writing-mode: vertical-rl
+        text-orientation: mixed
+        height: 100%
+        text-align: center
+        font-size: 1.2vw
+        padding-right: 5px
+        color: rgb(255, 255, 255)
+        &:hover
+            cursor: pointer
+            background-color: rgb(255, 255, 255)
+            transition-duration: 0.5s
+            color: black
+    .tab0
+        background-color: #c5e0f3
+    .tab1
+        background-color: rgb(179,206,225)
+    .tab2
+        background-color: rgb(100,151,178)
+    .tab3
+        background-color: rgb(3,92,150)
+    .tab4
+        background-color: rgb(4,57,109)
+    .tab5
+        background-color: rgb(3,32,76)
+.menu-btn
+    display: none
+@media ( max-width: 700px )
+    .tabs
+        width: 25px
+        height: 100vh
+        flex-direction: column
+        .tab
+            font-size: 0.8rem
+            position: relative
