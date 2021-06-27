@@ -4,13 +4,17 @@ import { Link } from 'react-router-dom'
 
 export default class Tabs extends React.Component {
     link_clicked(e){
+        let list=document.querySelectorAll(".tab")
+            list.forEach((e)=>e.classList.remove('clicked'))
         if(e==='profile'){
+            document.querySelector('.tab1').classList.add('clicked')
             let link=document.getElementById("profile");
             setTimeout(()=>{link.click()},1500)
         }
         if(e==='home'){
+            document.querySelector('.tab0').classList.add('clicked')
             let link=document.getElementById("home");
-            setTimeout(()=>{link.click()},1500)
+            setTimeout(()=>{link.click()},500)
         }
     }
 

@@ -10,6 +10,7 @@ import './style.sass'
 import './section.sass'
 import './tabs.sass'
 import './loading.sass'
+import './home.sass'
 
 import Profile from "./Profile";
 import Loading from "./Loading";
@@ -24,6 +25,7 @@ class App extends React.Component {
 
   componentDidMount(){
     gsap.registerPlugin( CSSPlugin )
+    
 
   }
   render(){
