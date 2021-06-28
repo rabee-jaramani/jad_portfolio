@@ -5,6 +5,7 @@
     display: flex
     width: 15%
     height: 100%
+    letter-spacing: 0.5rem
     .tab
         flex: 1
         writing-mode: vertical-rl
@@ -12,7 +13,7 @@
         height: 100%
         text-align: center
         font-size: 1.2vw
-        padding-right: 8px
+        padding-right: 0.5rem
         color: rgb(255, 255, 255)
         &:hover
             cursor: pointer
@@ -35,9 +36,11 @@
     display: none
 @media ( max-width: 700px )
     .tabs
-        width: 25px
+        width: 7%
         height: 100vh
         flex-direction: column
+        letter-spacing: 0
         .tab
-            font-size: 0.8rem
+            font-size: 0.9rem
             position: relative
+            padding-right: 0.3rem

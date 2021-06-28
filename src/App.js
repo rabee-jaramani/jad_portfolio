@@ -39,7 +39,7 @@ class App extends React.Component {
         </Switch>
         <Loading/>
         <Tabs/>
-
+        <canvas id="matrix"></canvas>
       </div>
     </BrowserRouter>
   );
