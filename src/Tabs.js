@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 
 export default class Tabs extends React.Component {
     link_clicked(e){
+        gsap.to(document.querySelector('.section'),{opacity:0})
+        
         let list=document.querySelectorAll(".tab")
         list.forEach((e)=>e.classList.remove('clicked'))
         this.props.update_prev_path(e)

@@ -10,6 +10,7 @@ import './section.sass'
 import './tabs.sass'
 import './loading.sass'
 import './home.sass'
+import './profile.sass'
 
 import Profile from "./Profile";
 import Loading from "./Loading";
@@ -31,6 +32,7 @@ this.setState({
 })
 }
   componentDidMount(){
+    console.log('APP MOUNTED '+this.state.prev_path)
     gsap.registerPlugin( CSSPlugin )
      // 
         // geting canvas by Boujjou Achraf
