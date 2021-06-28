@@ -1,0 +1,35 @@
+
+.skills
+    text-align: center
+    img
+        position: relative
+        margin-top: 2rem
+        width: 7rem
+        animation: skills-svg-anim 2s infinite linear
+    .progress
+        position: relative
+        left: 50%
+        transform: translate(-50%)
+        width: 70%
+        background-color: rgb(160, 217, 255)
+        margin: -1rem 0 1rem 0
+        height: 2rem
+        .progress-bar
+            background-color: rgb(3,92,150)
+@keyframes skills-svg-anim
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(359deg)
+@media ( max-width: 700px )
+    .skills
+        img
+            margin-top: 0.3rem
+            width: 3rem
+        .progress
+            position: relative
+            left: 50%
+            transform: translate(-50%)
+            width: 95%
+            margin: -1rem 0 1rem 0
+            height: 1.5rem

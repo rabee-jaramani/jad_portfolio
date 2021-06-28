@@ -4,6 +4,8 @@ import { CSSPlugin } from 'gsap/all'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Home'
 import Tabs from './Tabs'
+import Skills from './Skills'
+
 
 import './style.sass'
 import './section.sass'
@@ -11,6 +13,7 @@ import './tabs.sass'
 import './loading.sass'
 import './home.sass'
 import './profile.sass'
+import './skills.sass'
 
 import Profile from "./Profile";
 import Loading from "./Loading";
@@ -99,6 +102,8 @@ this.setState({
         <Switch>
         <Route exact  path='/' render={(props) => ( <Home {...props} prev_path={this.state.prev_path} />)}/>
         <Route path="/profile" render={(props) => ( <Profile {...props} prev_path={this.state.prev_path} />)} />
+        <Route path="/skills" render={(props) => ( <Skills {...props} prev_path={this.state.prev_path} />)} />
+        
         </Switch>
         <Loading/>
         <Tabs 
