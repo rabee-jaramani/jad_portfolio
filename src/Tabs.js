@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 export default class Tabs extends React.Component {
     link_clicked(e){
         let list=document.querySelectorAll(".tab")
-            list.forEach((e)=>e.classList.remove('clicked'))
+        list.forEach((e)=>e.classList.remove('clicked'))
+        this.props.update_prev_path(e)
         if(e==='profile'){
             document.querySelector('.tab1').classList.add('clicked')
             let link=document.getElementById("profile");
