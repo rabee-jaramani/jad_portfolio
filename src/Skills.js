@@ -67,7 +67,7 @@ export default class Skills extends React.Component {
 
             <div className='nidle-meters'>              
                 <ReactSpeedometer className='needle-meter-1'
-                  needleTransitionDuration={20000}
+                  needleTransitionDuration={15000}
                   needleTransition="easeBackInOut"
                     value={900}
                     currentValueText="C#"
@@ -109,7 +109,7 @@ export default class Skills extends React.Component {
                     ]}
                 />
                 <ReactSpeedometer className='needle-meter-2'
-                                  needleTransitionDuration={20000}
+                                  needleTransitionDuration={15000}
                                   needleTransition="easeBackInOut"
                     value={850}
                     currentValueText="SQL"
