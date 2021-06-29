@@ -2,6 +2,7 @@ import gsap from 'gsap/gsap-core'
 import React from 'react'
 import { ProgressBar } from 'react-bootstrap'
 import skills from './images/skills.svg'
+import ReactSpeedometer from "react-d3-speedometer"
 
 export default class Skills extends React.Component {
 
@@ -20,6 +21,8 @@ export default class Skills extends React.Component {
             gsap.from('.s10',{opacity:0,delay:4})
             gsap.from('.s11',{opacity:0,delay:4.2})
             gsap.from('.s12',{opacity:0,delay:4.4})
+            gsap.from('.speedometer',{display:'none',delay:4.6})
+            
         }else{
             gsap.from('.skills-svg',{left:-1000,duration:2,delay:4})
             gsap.from('.s1',{opacity:0,delay:6.2})
@@ -34,6 +37,8 @@ export default class Skills extends React.Component {
             gsap.from('.s10',{opacity:0,delay:8})
             gsap.from('.s11',{opacity:0,delay:8.2})
             gsap.from('.s12',{opacity:0,delay:8.4})
+            gsap.from('.speedometer',{display:'none',delay:8.6})
+
         }
 
     }
@@ -59,6 +64,94 @@ export default class Skills extends React.Component {
 
             <p className='s11'>CREATIVE PROBLEM SOLVING</p>
             <ProgressBar className='s12' animated now={66} />
+
+            <div className='nidle-meters'>              
+                <ReactSpeedometer className='needle-meter-1'
+                  needleTransitionDuration={20000}
+                  needleTransition="easeBackInOut"
+                    value={900}
+                    currentValueText="C#"
+                    valueTextFontSize='30px'
+                    width={200}
+                    height={150}
+                    needleHeightRatio={0.7}
+                    needleColor='#fffc53'
+                    segmentColors={[
+                       ' #c5e0f3','rgb(179,206,225)','rgb(100,151,178)','rgb(3,92,150)','rgb(4,57,109)'
+                    ]}
+                    customSegmentLabels={[
+                    {
+                        text: "10",
+                        position: "OUTSIDE",
+                        color: "#555",
+                
+                    },
+                    {
+                        text: "30",
+                        position: "OUTSIDE",
+                        color: "#555",
+                    },
+                    {
+                        text: "50",
+                        position: "OUTSIDE",
+                        color: "#555",
+                    },
+                    {
+                        text: "70",
+                        position: "OUTSIDE",
+                        color: "#555",
+                    },
+                    {
+                        text: "100",
+                        position: "OUTSIDE",
+                        color: "#555",
+                    },
+                    ]}
+                />
+                <ReactSpeedometer className='needle-meter-2'
+                                  needleTransitionDuration={20000}
+                                  needleTransition="easeBackInOut"
+                    value={850}
+                    currentValueText="SQL"
+                    valueTextFontSize='30px'
+                    width={200}
+                    height={150}
+                    needleHeightRatio={0.7}
+                    needleColor='#fffc53'
+                    segmentColors={[
+                       ' #c5e0f3','rgb(179,206,225)','rgb(100,151,178)','rgb(3,92,150)','rgb(4,57,109)'
+                    ]}
+                    customSegmentLabels={[
+                    {
+                        text: "10",
+                        position: "OUTSIDE",
+                        color: "#555",
+                
+                    },
+                    {
+                        text: "30",
+                        position: "OUTSIDE",
+                        color: "#555",
+                    },
+                    {
+                        text: "50",
+                        position: "OUTSIDE",
+                        color: "#555",
+                    },
+                    {
+                        text: "70",
+                        position: "OUTSIDE",
+                        color: "#555",
+                    },
+                    {
+                        text: "100",
+                        position: "OUTSIDE",
+                        color: "#555",
+                    },
+                    ]}
+                />
+                </div>
+
         </div>
     )
 }

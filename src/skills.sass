@@ -13,9 +13,17 @@
         width: 70%
         background-color: rgb(160, 217, 255)
         margin: -1rem 0 1rem 0
-        height: 2rem
+        height: 1.5rem
         .progress-bar
             background-color: rgb(3,92,150)
+.nidle-meters
+    display: flex
+    justify-content: center
+    gap: 1rem
+    margin-top: 2rem !important
+.speedometer
+    position: relative
+
 @keyframes skills-svg-anim
     0%
         transform: rotate(0deg)
@@ -24,6 +32,8 @@
 @media ( max-width: 700px )
     .skills
         margin-top: 1rem
+        p
+            font-size: 1rem
         img
             margin-top: 0.3rem
             width: 3rem
@@ -33,4 +43,7 @@
             transform: translate(-50%)
             width: 95%
             margin: -1rem 0 1rem 0
-            height: 1.5rem
+            height: 0.8rem
+    .nidle-meters
+        flex-direction: column
+        gap: 0
