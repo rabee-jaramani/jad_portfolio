@@ -34,27 +34,35 @@ this.setState({
   prev_path:path
 })
 }
-change_tabs_foucus(){
-  // var path=window.location.pathname;
-  // console.log('path '+path)
 
-  // let list=document.querySelectorAll(".tab")
-  // list.forEach((e)=>e.classList.remove('clicked'))
-  // if(path==='/profile'){
-  //     document.querySelector('.tab1').classList.add('clicked')
-  // }
-  // if(path==='/'){
-  //     document.querySelector('.tab0').classList.add('clicked')
-  // }
-  // if(path==='/skills'){
-  //     document.querySelector('.tab2').classList.add('clicked')
-  // }
-}
 componentDidUpdate(){
-  // this.change_tabs_foucus()
 }
   componentDidMount(){
-    console.log('APP MOUNTED '+this.state.prev_path)
+    var current_path=window.location.pathname;
+switch (current_path) {
+  case '/':
+    document.querySelector('.tab0').classList.add('clicked')
+    break;
+  case '/profile':
+    document.querySelector('.tab1').classList.add('clicked')
+    break;
+  case '/skills':
+    document.querySelector('.tab2').classList.add('clicked')
+    break;
+  case '/projects':
+    document.querySelector('.tab3').classList.add('clicked')
+    break;
+  case '/contact':
+    document.querySelector('.tab4').classList.add('clicked')
+      break;
+  case '/about':
+    document.querySelector('.tab5').classList.add('clicked')
+        break;
+
+  default:
+    break;
+}
+   
     gsap.registerPlugin( CSSPlugin )
      // 
         // geting canvas by Boujjou Achraf

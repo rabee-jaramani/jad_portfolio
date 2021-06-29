@@ -4,27 +4,32 @@ import { Link } from 'react-router-dom'
 
 export default class Tabs extends React.Component {
     link_clicked(e){
-        gsap.to(document.querySelector('.section'),{opacity:0})
-        
-        let list=document.querySelectorAll(".tab")
-        list.forEach((e)=>e.classList.remove('clicked'))
-        this.props.update_prev_path(e)
-        if(e==='profile'){
-            document.querySelector('.tab1').classList.add('clicked')
-            let link=document.getElementById("profile");
-            setTimeout(()=>{link.click()},1500)
+        if(document.querySelector('.'+e)){
+            return ''
         }
-        if(e==='home'){
-            document.querySelector('.tab0').classList.add('clicked')
-            let link=document.getElementById("home");
-            setTimeout(()=>{link.click()},500)
+        else{
+                gsap.to(document.querySelector('.section'),{opacity:0})
+                
+                let list=document.querySelectorAll(".tab")
+                list.forEach((e)=>e.classList.remove('clicked'))
+                this.props.update_prev_path(e)
+                if(e==='profile'){
+                    document.querySelector('.tab1').classList.add('clicked')
+                    let link=document.getElementById("profile");
+                    setTimeout(()=>{link.click()},1500)
+                }
+                if(e==='home'){
+                    document.querySelector('.tab0').classList.add('clicked')
+                    let link=document.getElementById("home");
+                    setTimeout(()=>{link.click()},500)
+                }
+                if(e==='skills'){
+                    document.querySelector('.tab2').classList.add('clicked')
+                    let link=document.getElementById("skills");
+                    setTimeout(()=>{link.click()},500)
+                }
+            }
         }
-        if(e==='skills'){
-            document.querySelector('.tab2').classList.add('clicked')
-            let link=document.getElementById("skills");
-            setTimeout(()=>{link.click()},500)
-        }
-    }
 
 componentDidMount(){
     if(window.innerWidth>700){
