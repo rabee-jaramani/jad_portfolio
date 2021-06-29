@@ -32,22 +32,22 @@ export default class Tabs extends React.Component {
         }
 
 componentDidMount(){
-    if(window.innerWidth>700){
+    if(document.body.clientWidth>700){
         var delay=4;
-        gsap.from('.tab0',{marginTop:-1000,delay:delay})
-        gsap.from('.tab1',{marginTop:-1000,delay:delay+0.2})
-        gsap.from('.tab2',{marginTop:-1000,delay:delay+0.4})
-        gsap.from('.tab3',{marginTop:-1000,delay:delay+0.6})
-        gsap.from('.tab4',{marginTop:-1000,delay:delay+0.8})
-        gsap.from('.tab5',{marginTop:-1000,delay:delay+1})
+        gsap.from('.tab0',{marginTop:-1400,delay:delay})
+        gsap.from('.tab1',{marginTop:-1400,delay:delay+0.2})
+        gsap.from('.tab2',{marginTop:-1400,delay:delay+0.4})
+        gsap.from('.tab3',{marginTop:-1400,delay:delay+0.6})
+        gsap.from('.tab4',{marginTop:-1400,delay:delay+0.8})
+        gsap.from('.tab5',{marginTop:-1400,delay:delay+1})
     }
-    if(window.innerWidth<=700){
-        gsap.from('.tab0',{top:-1000,duration:2,delay:4})
-        gsap.from('.tab1',{top:-1000,duration:2,delay:4.2})
-        gsap.from('.tab2',{top:-1000,duration:2,delay:4.4})
-        gsap.from('.tab3',{top:-1000,duration:2,delay:4.6})
-        gsap.from('.tab4',{top:-1000,duration:2,delay:4.8})
-        gsap.from('.tab5',{top:-1000,duration:2,delay:5})
+    if(document.body.clientWidth<=700){
+        gsap.from('.tab0',{right:-100,duration:2,delay:4})
+        gsap.from('.tab1',{right:-100,duration:2,delay:4.2})
+        gsap.from('.tab2',{right:-100,duration:2,delay:4.4})
+        gsap.from('.tab3',{right:-100,duration:2,delay:4.6})
+        gsap.from('.tab4',{right:-100,duration:2,delay:4.8})
+        gsap.from('.tab5',{right:-100,duration:2,delay:5})
 
 
     }
