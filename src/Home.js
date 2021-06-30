@@ -57,7 +57,15 @@ export default class Home extends React.Component {
                 <div className='neon-btn'></div>
                 <a href={jadCV} download="Jad Amer CV.pdf" target='_blank' rel="noreferrer">CV</a>
             </div>
-            
+            <div className='contact'>
+                    <a href="mailto:jadaamer@hotmail.com">
+                        <div className='phone'><i class="fas fa-at"></i> jadaamer@hotmail.com</div>
+                    </a>
+                    <a href='tel:+971522726746'>
+                        <div className='email'><i class="fas fa-mobile-alt"></i> +971 522726746</div>
+                    </a>
+                <a href="/#" className='address'><i class="fas fa-map-marker-alt"></i> Dubai, United Arab Emirates</a>
+            </div>
             
                
         </div>

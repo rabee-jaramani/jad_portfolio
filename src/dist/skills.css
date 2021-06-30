@@ -1,0 +1,66 @@
+.skills {
+  text-align: center;
+}
+.skills img {
+  position: relative;
+  margin-top: 2rem;
+  width: 7rem;
+  animation: skills-svg-anim 2s infinite linear;
+}
+.skills .progress {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 70%;
+  background-color: #a0d9ff;
+  margin: -1rem 0 1rem 0;
+  height: 1.5rem;
+}
+.skills .progress .progress-bar {
+  background-color: #035c96;
+}
+
+.nidle-meters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem !important;
+}
+
+.speedometer {
+  position: relative;
+}
+
+@keyframes skills-svg-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@media (max-width: 700px) {
+  .skills {
+    margin-top: 0.5rem;
+  }
+  .skills p {
+    font-size: 0.8rem;
+  }
+  .skills img {
+    margin-top: 0.3rem;
+    width: 3rem;
+  }
+  .skills .progress {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 95%;
+    margin: -1rem 0 0.5rem 0;
+    height: 0.8rem;
+  }
+
+  .nidle-meters {
+    flex-direction: column;
+    gap: 0;
+  }
+}

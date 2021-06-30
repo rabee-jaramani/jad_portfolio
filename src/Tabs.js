@@ -28,6 +28,21 @@ export default class Tabs extends React.Component {
                     let link=document.getElementById("skills");
                     setTimeout(()=>{link.click()},500)
                 }
+                if(e==='experience'){
+                    document.querySelector('.tab4').classList.add('clicked')
+                    let link=document.getElementById("experience");
+                    setTimeout(()=>{link.click()},500)
+                }
+                if(e==='projects'){
+                    document.querySelector('.tab3').classList.add('clicked')
+                    let link=document.getElementById("projects");
+                    setTimeout(()=>{link.click()},500)
+                }
+                if(e==='about'){
+                    document.querySelector('.tab5').classList.add('clicked')
+                    let link=document.getElementById("about");
+                    setTimeout(()=>{link.click()},500)
+                }
             }
         }
 
@@ -61,13 +76,18 @@ componentDidMount(){
                 <h2 className='tab tab0' onClick={()=>this.link_clicked('home')}>HOME</h2>
                 <h2 className='tab tab1' onClick={()=>this.link_clicked('profile')}>PROFILE</h2>
                 <h2 className='tab tab2' onClick={()=>this.link_clicked('skills')}>SKILLS</h2>
-                <h2 className='tab tab3'>PROJECTS</h2>
-                <h2 className='tab tab4'>CONTACT</h2>
-                <h2 className='tab tab5'>ABOUT</h2>
+                <h2 className='tab tab3' onClick={()=>this.link_clicked('projects')}>PROJECTS</h2>
+                <h2 className='tab tab4' onClick={()=>this.link_clicked('experience')}>EXPERIENCE</h2>
+                <h2 className='tab tab5' onClick={()=>this.link_clicked('about')}>ABOUT</h2>
+
                 
                 <Link id="home" to="/" className='hide-D'> </Link>
                 <Link id="profile" to="/profile" className='hide-D'> </Link>
                 <Link id="skills" to="/skills" className='hide-D'> </Link>
+                <Link id="experience" to="/experience" className='hide-D'> </Link>
+                <Link id="projects" to="/projects" className='hide-D'> </Link>
+                <Link id="about" to="/about" className='hide-D'> </Link>
+
 
                 
             </div>

@@ -1,0 +1,49 @@
+.profile {
+  padding-top: 5rem;
+  min-height: 100vh;
+}
+.profile .fa-address-card {
+  font-size: 4.2rem;
+  color: #035c96;
+}
+.profile p {
+  width: 50%;
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-top: 2rem;
+}
+.profile .fa-tasks, .profile .fa-sim-card, .profile .fa-handshake, .profile .fa-life-ring {
+  margin: 2rem;
+  font-size: 3.2rem;
+  color: #035c96;
+}
+.profile .jad2 {
+  width: 290px;
+  border-radius: 50%;
+  display: block;
+  margin-left: 50%;
+  transform: translate(-50%);
+  filter: brightness(1.3);
+  box-shadow: 10px 10px 10px #03204cc0;
+}
+
+@media (max-width: 700px) {
+  .profile {
+    padding-top: 1rem;
+    margin-top: 0;
+  }
+  .profile .fa-address-card {
+    font-size: 3.2rem;
+  }
+  .profile p {
+    width: 95%;
+  }
+  .profile .fa-tasks, .profile .fa-sim-card, .profile .fa-handshake, .profile .fa-life-ring {
+    margin: 0.5rem 1rem;
+    font-size: 2.2rem;
+    color: #035c96;
+  }
+  .profile .jad2 {
+    width: 250px;
+  }
+}

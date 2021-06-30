@@ -1,0 +1,46 @@
+.loading {
+  position: absolute;
+  width: 400px;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mobile-img {
+  width: 40px;
+}
+
+.computer-img {
+  width: 120px;
+}
+
+.zeros-ones {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 20%;
+  left: -200px;
+  z-index: -1;
+}
+
+.mobile {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+@media (max-width: 700px) {
+  .loading {
+    width: 270px;
+  }
+
+  .mobile-img {
+    width: 30px;
+    margin-top: 10px;
+  }
+
+  .computer-img {
+    width: 100px;
+  }
+}
